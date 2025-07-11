@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS File  -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- FontAwesome  -->
+  <link rel="stylesheet" href="css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <title>Tareky | طريقي</title>
+</head>
+<body>
+  <!--------------------------- Start Nav Bar ----------------------------------------->
+  <nav>
+    <div class="logo">
+      <img src="Images/Logo/Tareky-logo.svg" alt="Tareky">
+    </div>
+    <div class="list-bar">
+      <i  class="fa-solid fa-bars-staggered"></i>
+    </div>
+    <ul class="main-links">
+      <li><a href="#">الرئيسيه</a></li>
+      <li><a href="n_login.html">تسجيل الدخول</a></li>
+    </ul>
+    <div  class="category">
+      <button id="btn">كل التصنيفات<i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+    <div class="search-link-box"></div>
+    <ul id="sec" class="secondary-links" >
+      <a href="#"><li>برمجه</li></a>
+      <a href="#"><li>مونتاج وتعديل الفيديو</li></a>
+      <a href="#"><li>التصميم والجرافيك</li></a>
+      <a href="#"><li>الانجليزيه</li></a>
+    </ul>
+    <div  class="sear">
+      <input class="search" dir="rtl" type="text" placeholder="بحث عن كورسات">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+  </nav>
+  <!--------------------------- End Nav Bar ----------------------------------------->
+  <!--------------------------- Start Landing Page ----------------------------------------->
+  <div class="landing">
+    <h1>جميع الكورسات مدى الحياة</h1>
+    <p>استثمر في نفسك وانضم لمجتمع مبدعين العرب ولتحقيق هدفك وفَّرنا لك جميع طرق الدفع العالمية لتسهيل انضمامك أينما كنت</p>
+    <div class="photoSlider">
+      <div class="mainBox">
+        <img src="Images/slider/instructor-02.jpg" alt="">
+        <img src="Images/slider/instructor-03.jpg" alt="">
+        <img src="Images/slider/instructor-04.jpg" alt="">
+        <img src="Images/slider/instructor-05.jpg" alt="">
+        <img src="Images/slider/instructor-07.jpg" alt="">
+        <img src="Images/slider/instructor-08.jpg" alt="">
+        <img src="Images/slider/instructor-11.jpg" alt="">
+        <img src="Images/slider/instructor-14.jpg" alt="">
+        <img class="none" src="Images/slider/instructor-09.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <!--------------------------- End Landing Page ----------------------------------------->
+  <!--------------------------- Start Cantegory ----------------------------------------->
+  <!-- filter  -->
+<div class="filters" >
+  <select id="typeFilter">
+    <option value="all">كل الأنواع</option>
+    <option value="english">اللغة الإنجليزية</option>
+    <option value="video">مونتاج</option>
+    <option value="graphic">جرافيك</option>
+    <option value="programming">برمجة</option>
+    <option value="html">HTML</option>
+    <option value="css">CSS</option>
+    <option value="js">JavaScript</option>
+    <option value="capcut">CapCut</option>
+    <option value="adobe">Adobe</option>
+    <option value="photoshop">Photoshop</option>
+  </select>
+
+  <select id="priceFilter">
+    <option value="all">كل الأسعار</option>
+    <option value="under1500">أقل من 1500</option>
+    <option value="1500to2000">من 1500 إلى 2000</option>
+    <option value="above2000">أعلى من 2000</option>
+  </select>
+</div>
+  <!-- filter  -->
+  <div class="category">
+    <h2>التصنيفات</h2>
+    <div class="main">
+      <div class="design feat">
+        <i class="fa-solid fa-pen-nib"></i>
+        <div class="content">التصميم</div>
+      </div>
+      <div class="code feat">
+        <i class="fa-solid fa-code"></i>
+        <div class="content">البرمجه</div>
+      </div>
+      <div class="en feat">
+        <i class="fa-solid fa-language"></i>
+        <div class="content">الانجليزيه</div>
+      </div>
+      <div class="edit feat">
+        <i class="fa-solid fa-video"></i>
+        <div class="content">تحرير الفيديو</div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------- End Cantegory ----------------------------------------->
+  <!--------------------------- Start Most Pakage View Section ----------------------------------------->
+  <div class="pakage">
+    <h2>الباقات الاكثر مشاهده</h2>
+    <div class="main">
+
+<div class="box english" data-category="english" data-price="2000">
+        <img src="Images/english.png" alt="">
+        <p class="head">باقه اللغه الانجليزيه</p>
+        <p class="descripe">ابراهيم عادل</p>
+        <a href="english.html"><button>اشترك الان 2000 ج.م</button></a>
+      </div>
+
+      <div class="box Video" data-category="video" data-price="1500">
+        <img src="Images/videoediting.jpg" alt="">
+        <p class="head">باقه تعلم التعديل علي الفديو  </p>
+        <p class="descripe"> مصطفي مكرم</p>
+        <a href="video.html"><button>اشترك الان 1500 ج.م</button></a>
+      </div>
+
+      <div class="box graphic" data-category="graphic" data-price="1430">
+        <img src="Images/photoshop.jpg" alt="">
+        <p class="head">باقه تعلم الفوتوشوب </p>
+        <p class="descripe">نور ديزاين </p>
+        <a href="photoshop.html"><button>اشترك الان 1430 ج.م</button></a>
+      </div>
+
+<div class="box programming" data-category="programming" data-price="1320">
+        <img src="Images/programming.jpg" alt="">
+        <p class="head">باقه البرمجه </p>
+        <p class="descripe">الزيرو ويب سكول  </p>
+        <button>اشترك الان 1320 ج.م</button>
+      </div>
+
+    </div>
+  </div>
+  <!--------------------------- End Most Pakage View Section ----------------------------------------->
+  <!--------------------------- Start Most Video View ----------------------------------------->
+  <div class="most-video pakage">
+    <h2>الكورسات الاكثر مشاهده</h2>
+    <div class="main">
+
+      <div class="box html" data-category="html" data-price="600">
+        <img src="Images/more_view/html.jpg" alt="">
+        <p class="head">تعلم لغه HTML</p>
+        <p class="descripe">elzero web school</p>
+        <button><a href="">اشترك الان 600 ج.م</a></button>
+      </div>
+
+      <div class="box css" data-category="css" data-price="2300">
+        <img src="Images/more_view/css.jpg" alt="">
+        <p class="head">تعلم لغه CSS</p>
+        <p class="descripe">elzero web school</p>
+        <button>اشترك الان 2300 ج.م</button>
+      </div>
+
+      <div class="box js" data-category="js" data-price="1750">
+        <img src="Images/more_view/js.jpg" alt="">
+        <p class="head">تعلم لغه JavaScript</p>
+        <p class="descripe">elzero web school</p>
+        <button>اشترك الان 1750 ج.م</button>
+      </div>
+
+      <div class="box capcut" data-category="capcut" data-price="800">
+        <img src="Images/more_view/capcit.avif" alt="">
+        <p class="head">تعلم المونتاج CapCut</p>
+        <p class="descripe">عمرو عطالله</p>
+        <button>اشترك الان 800 ج.م</button>
+      </div>
+
+      <div class="box adobe" data-category="adobe" data-price="1000">
+        <img src="Images/more_view/adobe.jpg" alt="">
+        <p class="head">تعلم Adobe Premiere Pro</p>
+        <p class="descripe">مصطفي مكرم</p>
+        <button>اشترك الان 1000 ج.م</button>
+      </div>
+
+      <div class="box photoshop" data-category="photoshop" data-price="2020">
+        <img src="Images/more_view/photoshop.jpg" alt="">
+        <p class="head">تعلم الانجليزيه المستوي الاول</p>
+        <p class="descripe">ابراهيم عادل</p>
+        <button>اشترك الان 2020 ج.م</button>
+      </div>
+
+    </div>
+  </div>
+  <!--------------------------- End Most Video View ----------------------------------------->
+  <!--------------------------- Start Join With Me Section ----------------------------------------->
+  <div class="join">
+    <p class="head">انضم الينا و كن مع باقي المبدعين</p>
+    <button>أنضم الينا</button>
+
+    <div class="cir">
+
+      <button class="left"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="right"><i class="fa-solid fa-arrow-right"></i></button>
+
+      <div class="slide photo">
+        <img src="Images/slider/instructor-02.jpg" alt="">
+        <img src="Images/slider/instructor-02.jpg" alt="">
+        <img src="Images/slider/instructor-02.jpg" alt="">
+        <img src="Images/slider/instructor-02.jpg" alt="">
+      </div>
+
+    </div>
+  </div>
+  <!--------------------------- End Join With Me Section ----------------------------------------->
+
+  <!--------------------------- Start Footer ----------------------------------------->
+  <footer>
+
+    <div class="im-link">
+      <h3>روابط هامه</h3>
+      <ul>
+        <li><a href="#">شروط الاستخدام</a></li>
+        <li><a href="#">سياسه الاستخدام</a></li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <div class="logo">
+        <img src="Images/Logo/Tareky-logo.svg" alt="">
+      </div>
+      <div class="social"></div>
+    </div>
+
+  </footer>
+  <!--------------------------- End Footer ----------------------------------------->
+  <script src="js/main.js"></script>
+</body>
+</html>
