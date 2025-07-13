@@ -103,3 +103,244 @@ icon.addEventListener("click", () => {
   }
 });
 
+//courses page
+    const courses = [
+      {image: "Images/photoshop.jpg",
+        title: "باقه تعلم الفوتوشوب",
+        author: "Coursat Partners (Plan-B)",
+        price: "3945 ج.م"
+      },
+      {
+        image: "Images/programming.jpg",
+        title: "باقة البرمجة ومهارات العمل الحر",
+        author: "Coursat Partners (Plan-B)",
+        price: "3945 ج.م"
+      },
+      {
+        image: "Images/more_view/304e65f1-4a6c-47a9-842b-72d0ee1bf40f_اللغات (1).jpg",
+        title: "باقة دليلك الشامل للغة الإنجليزية",
+        author: "خبراء محترفون",
+        price: "3945 ج.م"
+      },
+      {
+        image: "Images/videoediting.jpg",
+        title: "باقة تعلم تحرير الفيديو",
+        author: "Coursat Partners (Plan-B)",
+        price: "3945 ج.م"
+      },
+    ];
+
+    const container = document.getElementById("courses-container");
+
+    container.style.display = "flex";
+    container.style.flexWrap = "wrap";
+    container.style.justifyContent = "center";
+    container.style.gap = "20px";
+    container.style.padding = "20px";
+    container.style.boxSizing = "border-box";
+
+    courses.forEach(course => {
+      const card = document.createElement("div");
+      card.style.width = "300px";
+      card.style.border = "1px solid #ccc";
+      card.style.borderRadius = "10px";
+      card.style.overflow = "hidden";
+      card.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)";
+      card.style.background = "#fff";
+      card.style.fontFamily = "sans-serif";
+      card.style.display = "flex";
+      card.style.flexDirection = "column";
+      card.style.alignItems = "center";
+
+
+      const img = document.createElement("img");
+      img.src = course.image;
+      img.alt = course.title;
+      img.style.width = "100%";
+      img.style.objectFit = "cover";
+
+      const title = document.createElement("p");
+      title.textContent = course.title;
+      title.style.fontWeight = "bold";
+      title.style.fontSize = "16px";
+      title.style.margin = "10px";
+
+
+      const author = document.createElement("p");
+      author.textContent = course.author;
+      author.style.fontSize = "12px";
+      author.style.color = "#888";
+      author.style.margin = "5px 10px";
+
+      const button = document.createElement("button");
+      button.textContent = `اشترك الآن ${course.price}`;
+      button.style.margin = "10px";
+      button.style.padding = "10px";
+      button.style.background = "#043377";
+      button.style.color = "#fff";
+      button.style.border = "none";
+      button.style.borderRadius = "5px";
+      button.style.cursor = "pointer";
+
+      // Add Elements To Cards
+      card.appendChild(img);
+      card.appendChild(title);
+      card.appendChild(author);
+      card.appendChild(button);
+      container.appendChild(card);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const newSection = document.createElement("div");
+newSection.style.marginTop = "40px";
+newSection.style.padding = "20px";
+newSection.style.display = "flex";
+newSection.style.flexWrap = "wrap";
+newSection.style.justifyContent = "center";
+newSection.style.gap = "20px";
+
+
+const sectionTitle = document.createElement("h2");
+sectionTitle.textContent = "كورسات مقترحة";
+sectionTitle.style.textAlign = "center";
+sectionTitle.style.fontFamily = "sans-serif";
+sectionTitle.style.marginBottom = "20px";
+
+
+const suggestedCourses = [
+  {
+    image: "Images/more_view/html.jpg",
+    title: "تعلم لغه HTML",
+    author: "اسامه الزيرو",
+    price: "1500 ج.م"
+  },
+  {
+    image: "Images/more_view/css.jpg",
+    title: "تعلم لغه CSS",
+    author: "اسامه الزيرو",
+    price: "999 ج.م"
+  },
+  {
+    image: "Images/more_view/js.jpg",
+    title: "تعلم لغه JS",
+    author: "اسامه محمد",
+    price: "1500 ج.م"
+  },
+  {
+    image: "Images/more_view/adobe.jpg",
+    title: "تعلم برنامج بريمير",
+    author: "مصطفي مكرم",
+    price: "999 ج.م"
+  },
+  {
+    image: "Images/adobe_amr.jpg",
+    title: "تعلم برنامج  بريمير",
+    author: "عمرو عطالله",
+    price: "1500 ج.م"
+  },
+  {
+    image: "Images/davinci.jpg",
+    title: "تعلم برنامج دافنشي",
+    author: "هيثم حسن",
+    price: "999 ج.م"
+  },
+  {
+    image: "Images/gr.jpg",
+    title: "تعلم برنامج كاب كات ",
+    author: "محمد جمال",
+    price: "1500 ج.م"
+  },
+  {
+    image: "Images/photoshop.jpg",
+    title: "تعلم الفوتوشوب و التحرير علي الصور",
+    author: "Plan-B",
+    price: "999 ج.م"
+  },
+];
+
+
+suggestedCourses.forEach(course => {
+  const card = document.createElement("div");
+  card.style.width = "300px";
+  card.style.border = "1px solid #ccc";
+  card.style.borderRadius = "10px";
+  card.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)";
+  card.style.display = "flex";
+  card.style.flexDirection = "column";
+  card.style.alignItems = "center";
+  card.style.fontFamily = "sans-serif";
+  card.style.background = "#fff";
+  card.style.overflow = "hidden";
+
+  const img = document.createElement("img");
+  img.src = course.image;
+  img.alt = course.title;
+  img.style.width = "100%";
+  img.style.objectFit = "cover";
+
+  const title = document.createElement("p");
+  title.textContent = course.title;
+  title.style.fontWeight = "bold";
+  title.style.fontSize = "16px";
+  title.style.margin = "10px";
+  title.style.textAlign = "center";
+
+  const info = document.createElement("p");
+  info.textContent = `كورس ${course.count}`;
+  info.style.fontSize = "14px";
+  info.style.color = "#555";
+  info.style.margin = "0 10px";
+  info.style.textAlign = "center";
+
+  const author = document.createElement("p");
+  author.textContent = course.author;
+  author.style.fontSize = "15px";
+  author.style.color = "#888";
+  author.style.margin = "5px 10px";
+  author.style.textAlign = "center";
+
+  const button = document.createElement("button");
+  button.textContent = `اشترك الآن ${course.price}`;
+  button.style.margin = "10px";
+  button.style.padding = "10px";
+  button.style.background = "#043377";
+  button.style.color = "#fff";
+  button.style.border = "none";
+  button.style.borderRadius = "5px";
+  button.style.cursor = "pointer";
+
+
+  card.appendChild(img);
+  card.appendChild(title);
+  card.appendChild(author);
+  card.appendChild(button);
+
+
+  newSection.appendChild(card);
+});
+
+
+const wrapper = document.createElement("div");
+wrapper.appendChild(sectionTitle);
+wrapper.appendChild(newSection);
+
+
+const footer = document.querySelector("footer");
+document.body.insertBefore(wrapper, footer);
+
+
+

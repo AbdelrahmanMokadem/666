@@ -22,15 +22,47 @@ body {
   --light-grey-text: #e7e7e7;
   --yellow: #f6b001;
 }
+.photoSlider {
+  height: 500px; /* طول البوكس اللي الصور بتتحرك فيه */
+  overflow: hidden;
+  position: relative;
+}
 
+.mainBox {
+    display: flex
+;
+    /* flex-direction: column; */
+    animation: moveUpDown 6s ease-in-out infinite alternate;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mainBox img {
+  width: 200px;
+  margin: 10px 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Animation */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-80px); /* قد إيه الصور تطلع لفوق */
+  }
+}
 /**************************** Start global-styles *******************************/
 ul {
   list-style: none;
+
 }
 
 a {
   text-decoration: none;
   color: var(--white);
+    font-size: 16px !important;
 }
 
 button {
@@ -40,6 +72,7 @@ button {
 
 i {
   color: var(--white);
+  color: #0a3e6e;
 }
 
 /****************************** Container ***************************************/
@@ -63,6 +96,51 @@ i {
   }
 }
 /********** Start Page-1 Styling ( Home Page )*********************/
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 20px;
+  font-family: 'Almarai', sans-serif;
+  position: relative;
+}
+@media (max-width:768px) {
+  .category {
+        top: 180px;
+}
+}
+/* نخلي العنوان والفلاتر جنب بعض */
+.category > h2,
+.filters {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.category > h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #043377;
+  display: inline-block;
+}
+
+/* الفلاتر جنب الهيدر */
+.filters {
+display: flex
+;
+    gap: 10px;
+    position: absolute;
+    top: 25%;
+}
+
+.filters select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 
 /**************************** Start Nav Bar **********************************/
 .list-bar {
@@ -221,7 +299,7 @@ nav .sear .search::placeholder {
   font-weight: 900;
   width: 40%;
   color: var(--main-color);
-  font-size: 65px;
+    font-size: 52px;
 }
 
 .landing p {
@@ -235,14 +313,15 @@ nav .sear .search::placeholder {
 @media (max-width: 768px) {
   .landing h1 {
     position: relative;
-    top: 200px;
+        top: 340px;
     width: 58%;
     padding: 0;
     right: 30px;
+    font-size: 52px;
   }
   .landing p {
     position: relative;
-    top: 190px;
+top: 370px;
     width: 69%;
     right: 30px;
     padding: 0px;
@@ -606,9 +685,11 @@ footer .box .logo img {
     width: 400px;
     height: fit-content;
     padding: 20px;
-    background-color: rebeccapurple;
+    background-color: var(--main-color);
     text-align: center;
     border-radius: 10px;
+    color: white;
+        line-height: 1.7;
 }
 /**************************** End video & play list ****************************/
 /*********** End Page-2 Styling ( Course Page Watching -> lesson.html ) ****************/
