@@ -103,30 +103,34 @@ icon.addEventListener("click", () => {
   }
 });
 
-//courses page
+//courses Home  page
     const courses = [
       {image: "Images/photoshop.jpg",
-        title: "باقه تعلم الفوتوشوب",
+        title: "باقة التصميم والجرافيك",
         author: "Coursat Partners (Plan-B)",
-        price: "3945 ج.م"
+        price: "3945 ج.م",
+        link: "photoshop.html"
       },
       {
         image: "Images/programming.jpg",
         title: "باقة البرمجة ومهارات العمل الحر",
         author: "Coursat Partners (Plan-B)",
-        price: "3945 ج.م"
+        price: "3945 ج.م",
+        link: ""
       },
       {
         image: "Images/more_view/304e65f1-4a6c-47a9-842b-72d0ee1bf40f_اللغات (1).jpg",
         title: "باقة دليلك الشامل للغة الإنجليزية",
         author: "خبراء محترفون",
-        price: "3945 ج.م"
+        price: "3945 ج.م",
+        link: "english.html"
       },
       {
         image: "Images/videoediting.jpg",
         title: "باقة تعلم تحرير الفيديو",
         author: "Coursat Partners (Plan-B)",
-        price: "3945 ج.م"
+        price: "3945 ج.م",
+        link: "video.html"
       },
     ];
 
@@ -172,21 +176,25 @@ icon.addEventListener("click", () => {
       author.style.color = "#888";
       author.style.margin = "5px 10px";
 
-      const button = document.createElement("button");
-      button.textContent = `اشترك الآن ${course.price}`;
-      button.style.margin = "10px";
-      button.style.padding = "10px";
-      button.style.background = "#043377";
-      button.style.color = "#fff";
-      button.style.border = "none";
-      button.style.borderRadius = "5px";
-      button.style.cursor = "pointer";
+const link = document.createElement("a");
+link.href = course.link; 
+link.textContent = `اشترك الآن ${course.price}`;
+link.style.display = "inline-block";
+link.style.margin = "10px";
+link.style.padding = "10px";
+link.style.background = "#043377";
+link.style.color = "#fff";
+link.style.border = "none";
+link.style.borderRadius = "5px";
+link.style.cursor = "pointer";
+link.style.textDecoration = "none";
+link.style.textAlign = "center";
 
       // Add Elements To Cards
       card.appendChild(img);
       card.appendChild(title);
       card.appendChild(author);
-      card.appendChild(button);
+      card.appendChild(link);
       container.appendChild(card);
     });
 
@@ -215,7 +223,7 @@ newSection.style.gap = "20px";
 
 
 const sectionTitle = document.createElement("h2");
-sectionTitle.textContent = "كورسات مقترحة";
+sectionTitle.textContent = "الكورسات الاكثر مشاهده";
 sectionTitle.style.textAlign = "center";
 sectionTitle.style.fontFamily = "sans-serif";
 sectionTitle.style.marginBottom = "20px";
@@ -313,21 +321,25 @@ suggestedCourses.forEach(course => {
   author.style.margin = "5px 10px";
   author.style.textAlign = "center";
 
-  const button = document.createElement("button");
-  button.textContent = `اشترك الآن ${course.price}`;
-  button.style.margin = "10px";
-  button.style.padding = "10px";
-  button.style.background = "#043377";
-  button.style.color = "#fff";
-  button.style.border = "none";
-  button.style.borderRadius = "5px";
-  button.style.cursor = "pointer";
+const link = document.createElement("a");
+link.href = ""; 
+link.textContent = `اشترك الآن ${course.price}`;
+link.style.display = "inline-block";
+link.style.margin = "10px";
+link.style.padding = "10px";
+link.style.background = "#043377";
+link.style.color = "#fff";
+link.style.border = "none";
+link.style.borderRadius = "5px";
+link.style.cursor = "pointer";
+link.style.textDecoration = "none";
+link.style.textAlign = "center";
 
 
   card.appendChild(img);
   card.appendChild(title);
   card.appendChild(author);
-  card.appendChild(button);
+card.appendChild(link);
 
 
   newSection.appendChild(card);
@@ -344,3 +356,91 @@ document.body.insertBefore(wrapper, footer);
 
 
 
+
+// Pakage Deatials
+
+document.addEventListener("DOMContentLoaded", () => {
+  const photoshopCourses = [
+    {
+      image: "Images/photoshop.jpg",
+      title: "تعلم الفوتوشوب و التحرير على الصور",
+      author: "Plan-B",
+      price: "999 ج.م",
+      link: "checkout.html"
+    },
+    {
+      image: "Images/adobe_amr.jpg",
+      title: "كورس الفوتوشوب المتقدم",
+      author: "عمرو عطالله",
+      price: "1500 ج.م",
+      link: "checkout.html"
+    }
+  ];
+
+  const container = document.getElementById("photoshop-courses-container");
+
+  if (!container) {
+    console.error("العنصر photoshop-courses-container مش موجود");
+    return;
+  }
+
+  container.style.display = "flex";
+  container.style.flexWrap = "wrap";
+  container.style.justifyContent = "center";
+  container.style.gap = "20px";
+  container.style.padding = "20px";
+  container.style.boxSizing = "border-box";
+
+  photoshopCourses.forEach(course => {
+    const card = document.createElement("div");
+    card.style.width = "300px";
+    card.style.border = "1px solid #ccc";
+    card.style.borderRadius = "10px";
+    card.style.overflow = "hidden";
+    card.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)";
+    card.style.background = "#fff";
+    card.style.fontFamily = "sans-serif";
+    card.style.display = "flex";
+    card.style.flexDirection = "column";
+    card.style.alignItems = "center";
+
+    const img = document.createElement("img");
+    img.src = course.image;
+    img.alt = course.title;
+    img.style.width = "100%";
+    img.style.objectFit = "cover";
+
+    const title = document.createElement("p");
+    title.textContent = course.title;
+    title.style.fontWeight = "bold";
+    title.style.fontSize = "16px";
+    title.style.margin = "10px";
+
+    const author = document.createElement("p");
+    author.textContent = course.author;
+    author.style.fontSize = "12px";
+    author.style.color = "#888";
+    author.style.margin = "5px 10px";
+
+    const link = document.createElement("a");
+    link.href = course.link;
+    link.textContent = `اشترك الآن ${course.price}`;
+    link.style.display = "inline-block";
+    link.style.margin = "10px";
+    link.style.padding = "10px";
+    link.style.background = "#043377";
+    link.style.color = "#fff";
+    link.style.border = "none";
+    link.style.borderRadius = "5px";
+    link.style.cursor = "pointer";
+    link.style.textDecoration = "none";
+    link.style.textAlign = "center";
+
+    card.appendChild(img);
+    card.appendChild(title);
+    card.appendChild(author);
+    card.appendChild(link);
+
+    container.appendChild(card);
+  });
+});

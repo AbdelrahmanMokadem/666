@@ -622,7 +622,7 @@ footer .box .logo img {
 }
 
 .video li {
-  font-size: 24px;
+font-size: 20px;
 }
 
 .video button:hover {
@@ -650,7 +650,7 @@ footer .box .logo img {
 }
 
 .deatials .head {
-  font-size: 45px;
+font-size: 25px;
   font-weight: 600;
   color: var(--main-color);
   border-bottom: 2px solid black;
@@ -660,7 +660,8 @@ footer .box .logo img {
 .deatials .head .fa-folder {
   color: var(--main-color);
   padding: 10px;
-  font-size: 35px;
+    font-size: 25px;
+
 }
 
 .deatials .discrip {
